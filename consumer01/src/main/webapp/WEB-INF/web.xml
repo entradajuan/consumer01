@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+version="3.0">
+<display-name>consumer01</display-name>
+  <servlet>
+    <servlet-name>consumer rest</servlet-name>
+    
+    <!--  <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>--> 
+   
+    
+    <servlet-class>com.ibm.websphere.jaxrs.server.IBMRestServlet</servlet-class> 
+    <init-param>
+         <param-name>javax.ws.rs.Application</param-name>
+         <param-value>com.needine.consumer01.SystemApplication</param-value>
+    </init-param>
+    
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>consumer rest</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+</web-app>
