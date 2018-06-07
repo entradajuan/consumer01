@@ -28,7 +28,6 @@ public class Test {
                             get(Response.class)
                             .toString();
 
-
         String plainAnswer =
                 target.path("rest").path("hello").request().accept(MediaType.TEXT_PLAIN).get(String.class);
         String xmlAnswer =
