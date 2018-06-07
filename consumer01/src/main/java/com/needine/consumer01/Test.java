@@ -44,7 +44,7 @@ public class Test {
 
     private static URI getBaseURI() {
     	
-        return UriBuilder.fromUri("http://localhost:9080/RS2").build();
+        return UriBuilder.fromUri("http://localhost:9080/consumer01").build();
     }
 
 
